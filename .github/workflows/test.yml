@@ -1,0 +1,13 @@
+name: T9c - Explicitly listed allowlist entry with branch name
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call action explicitly listed in allowlist with branch ref
+        uses: homebrew/actions/setup-homebrew@master
+        continue-on-error: true
